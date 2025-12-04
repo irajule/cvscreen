@@ -51,7 +51,7 @@ function ResumeApp() {
       }, 1000);
       const backendURL = process.env.REACT_APP_API_URL;
       const bp = `${backendURL}/docqa`
-      const res = await axios.post("http://127.0.0.1:8000/docqa", formData);
+      const res = await axios.post(bp, formData);
       setAnswer(res.data.answer);
     } catch (err) {
       console.error(err);

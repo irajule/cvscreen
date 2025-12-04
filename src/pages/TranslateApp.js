@@ -58,7 +58,7 @@ function TranslateApp() {
       }, 1000);
       const backendURL = process.env.REACT_APP_API_URL;
       const bp = `${backendURL}/translate`
-      const res = await axios.post("http://127.0.0.1:8000/translate", formData);
+      const res = await axios.post(bp, formData);
       setTranslation(res.data.translation || "No translation returned.");
     } catch (err) {
       console.error(err);

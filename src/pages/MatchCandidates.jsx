@@ -101,11 +101,7 @@ const MatchCandidates = () => {
           setLoadingMessage("Analyzing the documents…");
         }
       }, 1000);
-      {/*
-      const backendURL = process.env.REACT_APP_API_URL;
-      const bp = `${backendURL}/cvscreen`
-      const res = await axios.post("http://127.0.0.1:8000/cvscreen", formData);
-      */}
+     
       const backendURL = process.env.REACT_APP_API_URL;
       const bp = `${backendURL}/cvscreen`
       const res = await axios.post(bp, formData);
